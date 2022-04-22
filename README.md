@@ -10,6 +10,8 @@ ITU-T Focus Group on Autonomous Networks was established by ITU-T Study Group 13
 See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/11#discussioncomment-2607712
 
 ### Who is AI/ML 5G Challenge
-See here: https://aiforgood.itu.int/ai-ml-in-5g-challenge/
+See more here: https://aiforgood.itu.int/ai-ml-in-5g-challenge/
 
-
+### How to register for Build-a-thon 2022?
+Registration is not open yet, 
+See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3

@@ -14,4 +14,5 @@ See more here: https://aiforgood.itu.int/ai-ml-in-5g-challenge/
 
 ### How to register for Build-a-thon 2022?
 Registration is not open yet, 
-See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3
+See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/12#discussion-4027953 \
+And introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3

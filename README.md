@@ -14,6 +14,6 @@ See more here: https://aiforgood.itu.int/ai-ml-in-5g-challenge/
 
 ### How to register for Build-a-thon 2022?
 Form a team of max 4 + 1 (mentor) and \
-introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3
+introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3 \
 See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/12#discussion-4027953 
  

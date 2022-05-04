@@ -10,7 +10,7 @@ body:
       value: |
         Thanks for taking the time to register for Build-a-thon 2022!
   - type: dropdown
-    id: Total number of team members (including yourself if need be)
+    id: Total-number-of-team-members-including-yourself
     attributes:
       label: Total number of team members
       multiple: false
@@ -22,7 +22,7 @@ body:
     validations:
       required: true
   - type: input
-    id: team member 1
+    id: team-member-1
     attributes:
       label: Contact Details of team member 1
       description: Enter email id of team member 1
@@ -30,7 +30,7 @@ body:
     validations:
       required: true
   - type: input
-    id: team member 2
+    id: team-member-2
     attributes:
       label: Contact Details of team member 2
       description: Enter email id of team member 2
@@ -38,7 +38,7 @@ body:
     validations:
       required: false
   - type: input
-    id: team member 3
+    id: team-member-3
     attributes:
       label: Contact Details of team member 3
       description: Enter email id of team member 3
@@ -46,7 +46,7 @@ body:
     validations:
       required: false
   - type: input
-    id: team member 4
+    id: team-member-4
     attributes:
       label: Contact Details of team member 4
       description: Enter email id of team member 4
@@ -62,7 +62,7 @@ body:
     validations:
       required: false
   - type: textarea
-    id: tell us about yourself
+    id: tell-us-about-yourself
     attributes:
       label: tell us more about yourself
       description: names, countries, affiliations, etc

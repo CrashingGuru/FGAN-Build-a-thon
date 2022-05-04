@@ -67,7 +67,8 @@ body:
       label: tell us more about yourself
       description: names, countries, affiliations, etc
       placeholder: names of team members, affiliations, countries...
-      value: "name, designation, affiliation, country"
+      value: "name-1, designation-1, affiliation-1, country-1 \
+      name-2, designation-2, affiliation-2, country-2"
     validations:
       required: true
   - type: checkboxes

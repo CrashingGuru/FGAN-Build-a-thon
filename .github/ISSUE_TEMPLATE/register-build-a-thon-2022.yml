@@ -1,0 +1,80 @@
+name: Register for Build-a-thon 2022
+description: Register for Build-a-thon 2022
+title: "[Register for Build-a-thon 2022]: "
+labels: ["Register for Build-a-thon 2022"]
+assignees:
+  - vrra
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to register for Build-a-thon 2022!
+  - type: dropdown
+    id: Total number of team members (including yourself if need be)
+    attributes:
+      label: Total number of team members
+      multiple: false
+      options:
+        - 1
+        - 2
+        - 3
+        - 4 
+    validations:
+      required: true
+  - type: input
+    id: team member 1
+    attributes:
+      label: Contact Details of team member 1
+      description: Enter email id of team member 1
+      placeholder: ex. email@example.com
+    validations:
+      required: true
+  - type: input
+    id: team member 2
+    attributes:
+      label: Contact Details of team member 2
+      description: Enter email id of team member 2
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: team member 3
+    attributes:
+      label: Contact Details of team member 3
+      description: Enter email id of team member 3
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: team member 4
+    attributes:
+      label: Contact Details of team member 4
+      description: Enter email id of team member 4
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: input
+    id: mentor
+    attributes:
+      label: Contact Details of mentor
+      description: Enter email id of mentor
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: tell us about yourself
+    attributes:
+      label: tell us more about yourself
+      description: names, countries, affiliations, etc
+      placeholder: names of team members, affiliations, countries...
+      value: "name, designation, affiliation, country"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this registration, you agree to follow the ITU AI/ML 5G Challenge [Code of Conduct](https://challenge.aiforgood.itu.int)
+      options:
+        - label: I agree to follow the Challenge Code of Conduct
+          required: true

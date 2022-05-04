@@ -68,7 +68,7 @@ body:
       description: names, countries, affiliations, etc
       placeholder: names of team members, affiliations, countries...
       value: "name-1, designation-1, affiliation-1, country-1 \n
-     name-2, designation-2, affiliation-2, country-2"
+      name-2, designation-2, affiliation-2, country-2"
     validations:
       required: true
   - type: checkboxes

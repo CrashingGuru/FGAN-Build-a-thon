@@ -9,6 +9,14 @@ body:
     attributes:
       value: |
         Thanks for taking the time to register for Build-a-thon 2022!
+  - type: input
+    id: team-name
+    attributes:
+      label: Team name
+      description: Enter a catchy name for your team
+      placeholder: ex. Bob-the-builder
+    validations:
+      required: true
   - type: dropdown
     id: Total-number-of-team-members-including-yourself
     attributes:

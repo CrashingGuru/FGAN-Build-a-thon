@@ -16,6 +16,7 @@ Please note that the timeline of the Build-a-thon 2022 will closely follow that 
 
 ### How to register for Build-a-thon 2022?
 Form a team of max 4 + 1 (mentor) and \
+Register here: https://github.com/vrra/FGAN-Build-a-thon-2022/issues/new/choose \
 introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3 \
 See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/12#discussion-4027953 
  

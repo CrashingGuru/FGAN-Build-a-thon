@@ -1,0 +1,12 @@
+Actor,Description,label,relation
+Scenarios for experimentation,Used for experimentation ,,Experimentation controller -> decides -> scenarios for experimentation
+AN Sandbox,Hosts simulators,,AN sandbox -> hosts -> simulators
+,Monitors the simulators and generate some reports for humans.,,AN sandbox -> manages -> simulators
+,,,AN sandbox -> generates -> reports
+Experimentation controller ,"Triggers experiments, Executes experiments",,Experimentation controller  -> triggers -> experiments
+,,,Experimentation controller  -> generates -> reports
+,,,Experimentation controller -> executes-> experiments
+,,,Experimentation controller -> monitors -> experiments
+reports,,,Experimentation controller -> uses  -> AN Sandbox
+,,,Experimentation controller -> updates  -> KB
+Experiments,,,Experiments -> has -> scenarios for experimentation

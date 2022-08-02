@@ -1,0 +1,27 @@
+name: Bug or Feature
+description: Create a Bug or feature
+title: "Create a Bug or feature request "
+labels: ["Create a Bug or feature request"]
+assignees:
+  - vrra
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a Bug or feature request!
+  - type: input
+    id: Title
+    attributes:
+      label: Title
+      description: Enter a title for your bug/feature
+      placeholder: ex. A new feature to get a round object called moon
+    validations:
+      required: true
+  - type: input
+    id: Describe-it
+    attributes:
+      label: Description
+      description: Enter a description
+      placeholder: ex. get the moon
+    validations:
+      required: true  

@@ -83,13 +83,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: 
-      Code of Conduct
-Participants will treat each other, other teams and participants with respect, professionalism, fairness, and sensitivity to our many differences and strengths. 
-All discussions would be courteous,  participants should not accept or engage in abusive behavior in any form, whether it is verbal, physical, sexual, or implied.
-Judges decisions would be final.
-We value giving credit when credit is due. Participants shall only take credit for their own original work and where required, participants would add citations and give credits to others, plagiarism would result in immediate disqualification from the challenge.
-If participants are allocated ITU resources (e.g. GPUs), they agree to use it solely for the purposes of the challenge. Violating this condition will result in immediate dismissal from the challenge.
+      description: Code of Conduct Participants will treat each other, other teams and participants with respect, professionalism, fairness, and sensitivity to our many differences and strengths.  All discussions would be courteous,  participants should not accept or engage in abusive behavior in any form, whether it is verbal, physical, sexual, or implied. Judges decisions would be final. We value giving credit when credit is due. Participants shall only take credit for their own original work and where required, participants would add citations and give credits to others, plagiarism would result in immediate disqualification from the challenge. If participants are allocated ITU resources (e.g. GPUs), they agree to use it solely for the purposes of the challenge. Violating this condition will result in immediate dismissal from the challenge.
       options:
         - label: I agree to follow the Challenge Code of Conduct
           required: true

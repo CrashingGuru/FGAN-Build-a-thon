@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+# write the attributes of the source node.
+    - name: Output the sink URI to json 
+      copy: 
+        dest: /home/sink.json
+        content: "{'output_src_URI': '{{link}}'}"
+

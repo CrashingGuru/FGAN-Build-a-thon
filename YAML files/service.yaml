@@ -1,0 +1,126 @@
+---
+    tosca_definitions_version: tosca_simple_yaml_1_3
+    
+    node_types:
+      source_node_types:
+        derived_from: tosca.nodes.SoftwareComponent
+        attributes:
+          rest_api_attribute:
+            description: Rest API 
+            type: string
+            default: "https://defaultweb.com"       
+        interfaces:
+            Standard:
+              operations:
+                create:
+                  implementation: playbooks/create.yaml
+                  inputs:
+                    link:
+                      type: string
+                      default: {get_attribute: [SELF, rest_api_attribute]}   
+    
+      model_node_types:
+        derived_from: tosca.nodes.SoftwareComponent
+        attributes:
+          rest_api_attribute:
+            description: Rest API 
+            type: string
+            default: "https://defaultweb.com"       
+        interfaces:
+            Standard:
+              operations:
+                create:
+                  implementation: playbooks/create_model.yaml
+                  inputs:
+                    link:
+                      type: string
+                      default: {get_attribute: [SELF, rest_api_attribute]}   
+    
+      sink_node_types:
+        derived_from: tosca.nodes.SoftwareComponent
+        attributes:
+          rest_api_attribute:
+            description: Rest API 
+            type: string
+            default: "https://defaultweb.com"       
+        interfaces:
+            Standard:
+              operations:
+                create:
+                  implementation: playbooks/create_sink.yaml
+                  inputs:
+                    link:
+                      type: string
+                      default: {get_attribute: [SELF, rest_api_attribute]}   
+    
+      
+    
+    topology_template:
+      node_templates:
+        source_node:
+          type: source_node_types
+          attributes:
+              rest_api_attribute: "downloadsource.com"
+          interfaces:
+            Standard:
+              operations:
+                create:
+                  implementation: playbooks/create.yaml
+                  inputs:
+                    link:
+                      type: string
+                      default: {get_attribute: [SELF, rest_api_attribute]}    
+        ml_node:
+          type: model_node_types
+          requirements:
+            - dependency: source_node
+            - host: workstation
+          attributes:
+            rest_api_attribute: "downloadmodel.com"
+          interfaces:
+                Standard:
+                  operations:
+                    create:
+                      implementation: playbooks/create.yaml
+                      inputs:
+                        link:
+                          type: string
+                          default: {get_attribute: [SELF, rest_api_attribute]}        
+        workstation:
+          type: tosca.nodes.Compute
+          # capabilities:
+            # Host container properties
+          attributes:
+            public_address: localhost
+            private_address: localhost
+                  
+            # host:
+            #   properties:
+            #     num_cpus: 4
+            #     disk_size: 1000 GB
+            #     mem_size: 12288 MB
+                # Guest Operating System properties
+        sink_node:
+          type: sink_node_types
+          requirements:
+            - dependency: ml_node
+          attributes:
+              rest_api_attribute: "postconfig.com"
+            
+    
+    
+        #not needed.
+      outputs:
+        output_src_URI:
+          description: Rest API to fetch data
+          value: { get_attribute: [ source_node, rest_api_attribute ] }
+        output_attribute_csv_file:
+          description: Sample source data 
+          value: { get_attribute: [ ml_node, rest_api_attribute ] }
+    
+    
+        output_sink_uri:
+          description: Sink REST API to set values
+          value: { get_attribute: [ sink_node, rest_api_attribute ] } #url to .
+    
+    

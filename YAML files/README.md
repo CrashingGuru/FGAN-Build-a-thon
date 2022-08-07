@@ -3,7 +3,7 @@
 
 Basic Three node closed loop
 
-see the operaparse notebook
+see the operaparseR notebook
 
 
 

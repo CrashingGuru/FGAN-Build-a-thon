@@ -2,8 +2,8 @@
 # Build-a-thon 2022
 
 Basic three node closed loop
-
-see the operaparser.ipynb notebook
+upload the playbook folder to colab
+before running the operaparser.ipynb notebook
 
 
 

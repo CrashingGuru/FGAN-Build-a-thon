@@ -1,9 +1,9 @@
 
 # Build-a-thon 2022
 
-Basic Three node closed loop
+Basic three node closed loop
 
-see the operaparse notebook
+see the operaparser.ipynb notebook
 
 
 

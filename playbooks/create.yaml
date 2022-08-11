@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+# write the attributes of the source node.
+    - name: Output the source URI to json 
+      copy: 
+        dest: /home/source_api.json
+        content: "{'output_src_URI': '{{link}}'}"
+

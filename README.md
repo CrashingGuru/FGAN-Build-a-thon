@@ -1,6 +1,6 @@
-<img src="Banner/1920x1080-FG_AN-buildathon_Sep02-01.png" width="500" height="250" />
+<img src="Banner/1920x1080-FG_AN-buildathon-3.png" width="500" height="250" />
 
-Register here for Workshop 2.0 https://itu.zoom.us/meeting/register/tJEpdeuvpjosHdYvBH3juSCuX99NioDKWoiY 
+Register for Workshop 3.0 [here](https://itu.zoom.us/meeting/register/tJcof-2qqzktHdKUr0rTJSJ1eWLRsv-sMCTg)
 
 # Build-a-thon 2022
 This repo includes all material for ITU-T FG AN Build-a-thon in 2022

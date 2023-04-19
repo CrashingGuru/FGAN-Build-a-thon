@@ -1,9 +1,9 @@
-<img src="Banner/1920x1080-FG_AN-buildathon-3.png" width="500" height="250" />
+<img src="Banner/Build-a-thon-2023-w2.png" width="500" height="250" />
 
-Register for Workshop 3.0 [here](https://itu.zoom.us/meeting/register/tJcof-2qqzktHdKUr0rTJSJ1eWLRsv-sMCTg)
+Register for Build-a-thon 2023 Workshop 2.0 [here](https://itu.zoom.us/meeting/register/tJIof-GopjwoG9Smfvvc-m4SGYf4EJ-yLUR4)
 
-# Build-a-thon 2022
-This repo includes all material for ITU-T FG AN Build-a-thon in 2022
+# Build-a-thon 
+This repo includes all material for ITU-T FG AN Build-a-thon in 2022 and 2023
 
 ### What is a Build-a-thon?
 Build-a-thon is an almost year long PoC activity led by ITU-T FG AN. \
@@ -20,7 +20,7 @@ Please note that the timeline of the Build-a-thon 2022 will closely follow that 
 
 ### How to register for Build-a-thon 2022?
 Form a team of max 4 + 1 (mentor) and \
-Register here: https://github.com/vrra/FGAN-Build-a-thon-2022/issues/new/choose \
-introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/3 \
-See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/12#discussion-4027953 
+Register here: https://github.com/vrra/FGAN-Build-a-thon/issues/new/choose \
+introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon/discussions/3 \
+See more here: https://github.com/vrra/FGAN-Build-a-thon/discussions/12#discussion-4027953 
  

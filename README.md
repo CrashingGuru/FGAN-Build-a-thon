@@ -16,9 +16,9 @@ See more here: https://github.com/vrra/FGAN-Build-a-thon-2022/discussions/11#dis
 
 ### Who is AI/ML 5G Challenge
 See more here: https://aiforgood.itu.int/ai-ml-in-5g-challenge/ \
-Please note that the timeline of the Build-a-thon 2022 will closely follow that of the Challenge.
+Please note that the timeline of the Build-a-thon 2023 will closely follow that of the Challenge.
 
-### How to register for Build-a-thon 2022?
+### How to register for Build-a-thon 2023?
 Form a team of max 4 + 1 (mentor) and \
 Register here: https://github.com/vrra/FGAN-Build-a-thon/issues/new/choose \
 introduce your teams here: https://github.com/vrra/FGAN-Build-a-thon/discussions/3 \

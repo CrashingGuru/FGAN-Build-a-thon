@@ -1,0 +1,14 @@
+name: sample1
+run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  issues: 
+    types: [opened, edited]
+jobs:
+  issue_opened_edited:
+    if: ${{ github.event.issue.labels.name == "Submit use case for Build-a-thon 2023"}}
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo Gotcha issue $NUMBER
+        env:
+          NUMBER: ${{ github.event.issue.number }}

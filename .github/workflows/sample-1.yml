@@ -22,7 +22,7 @@ jobs:
           echo "secret : VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN : $VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"
           uses: actions/checkout@v2
           with:
-            repository: jcdan3/devops
+            repository: vrra/FGAN-Build-a-thon
             token: ${{ secrets.MY_GITHUB_TOKEN }}
           python ${{ env.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
           shell: sh

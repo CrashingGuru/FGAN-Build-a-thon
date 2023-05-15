@@ -5,7 +5,7 @@ on:
     types: [opened, edited]
 jobs:
   issue_opened_edited:
-    if: ${{ github.event.issue.labels.name == "Submit use case for Build-a-thon 2023"}}
+    if: ${{ github.event.issue.labels.name == 'Submit use case for Build-a-thon 2023'}}
     runs-on: ubuntu-latest
     steps:
       - run: |

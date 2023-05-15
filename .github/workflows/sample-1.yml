@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo Gotcha issue $name
+          echo Gotcha issue $LABELS
         env:
-          name: ${{ github.event.issue.labels.name }}
+          LABELS: ${{ github.event.issue.labels }}

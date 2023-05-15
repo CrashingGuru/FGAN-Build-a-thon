@@ -19,7 +19,7 @@ body:
     validations:
       required: true
   - type: input
-    id: Use case Text
+    id: Use-case-Text
     attributes:
       label: Use case Text
       description: Enter use case text here

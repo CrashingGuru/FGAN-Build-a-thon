@@ -10,4 +10,4 @@ jobs:
       - run: |
           echo Gotcha issue $LABELS
         env:
-          LABELS: ${{ github.event.issue.labels }}
+          LABELS: ${{ github.event.issue.labels.name }}

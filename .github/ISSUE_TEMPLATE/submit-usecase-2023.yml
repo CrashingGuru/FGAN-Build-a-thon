@@ -9,6 +9,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to submit use case for Build-a-thon 2023!
+        CAUTION: make sure you are registered first here https://github.com/vrra/FGAN-Build-a-thon/issues/new/choose
   - type: dropdown
     id: team-name
     attributes:

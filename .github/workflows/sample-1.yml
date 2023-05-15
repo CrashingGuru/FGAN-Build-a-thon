@@ -12,20 +12,19 @@ jobs:
         run: |
           echo Gotcha issue $LABELS
         env:
-          LABELS: ${{ github.event.issue.labels[0].name }}
-          
+          LABELS: ${{ github.event.issue.labels[0].name }}   
       - name: print secret and variables
-        run: |
-          echo "repository variable : $API_URL"
-          echo "secret : API_KEY : $API_KEY"
-          echo "secret : ARGILLA_WORKSPACE : $ARGILLA_WORKSPACE"
-          echo "secret : VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN : $VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"
-          uses: actions/checkout@v2
-          with:
+        uses: actions/checkout@v2
+        with:
             repository: vrra/FGAN-Build-a-thon
             token: ${{ secrets.MY_GITHUB_TOKEN }}
-          python ${{ env.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
-          shell: sh
+            run: |
+              echo "repository variable : $API_URL"
+              echo "secret : API_KEY : $API_KEY"
+              echo "secret : ARGILLA_WORKSPACE : $ARGILLA_WORKSPACE"
+              echo "secret : VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN : $VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"
+              python ${{ env.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
+              shell: sh
         env:
           API_URL: ${{ vars.API_URL }}
           API_KEY: ${{ secrets.API_KEY }}

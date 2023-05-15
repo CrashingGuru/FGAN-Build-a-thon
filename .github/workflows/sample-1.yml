@@ -3,11 +3,25 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   issues: 
     types: [opened, edited]
+    
 jobs:
   issue_opened_edited:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: print issue details
+        run: |
           echo Gotcha issue $LABELS
         env:
           LABELS: ${{ github.event.issue.labels[0].name }}
+          
+      - name: print secret and variables
+        run: |
+          echo "repository variable : $API_URL"
+          echo "secret : API_KEY : $API_KEY"
+          echo "secret : ARGILLA_WORKSPACE : $ARGILLA_WORKSPACE"
+          echo "secret : VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN : $VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"
+        env:
+          API_URL: ${{ vars.API_URL }}
+          API_KEY: ${{ secrets.API_KEY }}
+          ARGILLA_WORKSPACE: ${{ secrets.ARGILLA_WORKSPACE }}
+          VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN: ${{ secrets.VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN }}

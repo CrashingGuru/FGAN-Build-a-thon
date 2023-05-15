@@ -20,6 +20,10 @@ jobs:
           echo "secret : API_KEY : $API_KEY"
           echo "secret : ARGILLA_WORKSPACE : $ARGILLA_WORKSPACE"
           echo "secret : VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN : $VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"
+          uses: actions/checkout@v2
+          with:
+            repository: jcdan3/devops
+            token: ${{ secrets.MY_GITHUB_TOKEN }}
           python ${{ env.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
           shell: sh
         env:

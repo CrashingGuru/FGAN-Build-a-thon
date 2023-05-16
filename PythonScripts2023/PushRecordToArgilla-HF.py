@@ -64,9 +64,13 @@ team_name=issue_body_list[1].split("\n\n", 1)
 usecase_text=issue_body_list[2].split("\n\n", 1)
 ref=issue_body_list[3].split("\n\n", 1)
 
-print(team_name)
-print(usecase_text)
-print(ref)
+team_name=team_name[1]
+usecase_text=usecase_text[1]
+ref=ref[1]
+
+print("team_name= ", team_name)
+print("usecase_text = ", usecase_text)
+print("ref = ", ref)
 
 record = rg.TextClassificationRecord(
                 text=usecase_text,
@@ -77,5 +81,6 @@ record = rg.TextClassificationRecord(
                         "ref": ref
                     },
                 )
+
 dataset_rg = rg.DatasetForTextClassification([record])
 rg.log(dataset_rg, "fgan23allpages")

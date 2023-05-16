@@ -17,7 +17,10 @@ print(os.environ.get("API_URL"))
 print(os.environ.get("API_KEY"))
 print(os.environ.get("ARGILLA_WORKSPACE"))
 print(os.environ.get("VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"))
+print(os.environ.get("SCRIPTS_DIR"))
 
-with open('issue.out', 'r') as json_file:
+issue_json= print(os.environ.get("SCRIPTS_DIR")) + 'issue.out'
+
+with open(issue_json, 'r') as json_file:
     json_object = json.load(json_file)
 print(json.dumps(json_object, indent=1))

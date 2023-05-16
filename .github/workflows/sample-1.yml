@@ -33,4 +33,4 @@ jobs:
             API_KEY: ${{ vars.API_KEY }}
             ARGILLA_WORKSPACE: ${{ vars.ARGILLA_WORKSPACE }}
             VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN: ${{ vars.VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN }}      
-            SCRIPTS_DIR: ${{ vars.SCRIPTS_DIR }  
+            SCRIPTS_DIR: ${{ vars.SCRIPTS_DIR }}  

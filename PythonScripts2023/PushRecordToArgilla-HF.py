@@ -29,6 +29,8 @@ with open(issue_json, 'r') as json_file:
 issue_body=json_object["event"]["issue"]["body"]
 issue_body_list=issue_body.split("###")
 
+print("issue_body_list= ", issue_body_list)
+
 team_name=issue_body_list[1].split("\n\n")
 usecase_text=issue_body_list[2].split("\n\n")
 ref=issue_body_list[3].split("\n\n")

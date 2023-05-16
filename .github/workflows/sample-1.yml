@@ -27,7 +27,6 @@ jobs:
 
       - name: Push to Argilla
         run: python ${{ vars.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
-        shell: sh
         env:
             API_URL: ${{ vars.API_URL }}
             API_KEY: ${{ vars.API_KEY }}

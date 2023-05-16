@@ -19,7 +19,9 @@ print(os.environ.get("ARGILLA_WORKSPACE"))
 print(os.environ.get("VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"))
 print(os.environ.get("SCRIPTS_DIR"))
 
-issue_json= os.environ.get("SCRIPTS_DIR") + 'issue.out'
+issue_json= os.environ.get("SCRIPTS_DIR") + '/issue.out'
+print("current working dir = "+os.getcwd())
+print("issue_json = "+issue_json)
 
 with open(issue_json, 'r') as json_file:
     json_object = json.load(json_file)

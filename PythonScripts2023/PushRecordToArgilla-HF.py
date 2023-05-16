@@ -12,6 +12,14 @@
 
 import os
 import json
+
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install("argilla")
 import argilla as rg
 
 uri= os.environ.get("API_URL")

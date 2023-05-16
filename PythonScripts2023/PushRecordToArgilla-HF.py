@@ -12,12 +12,17 @@
 
 import os
 import json
+import argilla as rg
 
-print(os.environ.get("API_URL"))
-print(os.environ.get("API_KEY"))
-print(os.environ.get("ARGILLA_WORKSPACE"))
-print(os.environ.get("VISHNURAMOV_PUSH_TO_HF_HUB_TOKEN"))
-print(os.environ.get("SCRIPTS_DIR"))
+uri= os.environ.get("API_URL")
+key= os.environ.get("API_KEY")
+my_argilla_workspace = os.environ.get("ARGILLA_WORKSPACE")
+
+rg.init(    
+    api_url=uri, 
+    api_key=key,
+    workspace=my_argilla_workspace
+)
 
 issue_json= os.environ.get("SCRIPTS_DIR") + '/issue.out'
 print("current working dir = "+os.getcwd())
@@ -39,3 +44,15 @@ ref=issue_body_list[3].split("\n\n", 1)
 print(team_name)
 print(usecase_text)
 print(ref)
+
+record = rg.TextClassificationRecord(
+                text=usecase_text,
+                    # Extra information about this record
+                metadata={
+                        "split": "train",
+                        "team_name": team_name,
+                        "ref": ref
+                    },
+                )
+dataset_rg = rg.DatasetForTextClassification([record])
+rg.log(dataset_rg, "fgan23allpages")

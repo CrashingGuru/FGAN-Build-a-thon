@@ -24,11 +24,11 @@ print(installed_packages)
 
 #subprocess.check_call([sys.executable, "-m", "pip", "install", "argilla"])
 # process output with an API in the subprocess module:
-reqs = subprocess.check_output([sys.executable, '-m', 'pip',
-'freeze'])
-installed_packages = [r.decode().split('==')[0] for r in reqs.split()]
+#reqs = subprocess.check_output([sys.executable, '-m', 'pip',
+#'freeze'])
+#installed_packages = [r.decode().split('==')[0] for r in reqs.split()]
 
-print(installed_packages)
+#print(installed_packages)
 print(sys.path)
 
 import argilla as rg
@@ -36,6 +36,10 @@ import argilla as rg
 uri= os.environ.get("API_URL")
 key= os.environ.get("API_KEY")
 my_argilla_workspace = os.environ.get("ARGILLA_WORKSPACE")
+
+print(uri)
+print(key)
+print(my_argilla_workspace)
 
 rg.init(    
     api_url=uri, 

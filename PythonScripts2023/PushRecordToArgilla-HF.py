@@ -26,7 +26,6 @@ print("issue_json = "+issue_json)
 with open(issue_json, 'r') as json_file:
     json_object = json.load(json_file)
 
-print(json.dumps(json_object, indent=1))
-
-print(json_object["event"]["issue"]["body"])
-#print(json_object["labels"])
+issue_body=json_object["event"]["issue"]["body"]
+issue_body_list=issue_body.split("###")
+print(issue_body_list)

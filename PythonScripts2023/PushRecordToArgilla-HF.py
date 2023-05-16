@@ -22,17 +22,16 @@ installed_packages = [r.decode().split('==')[0] for r in reqs.split()]
 
 print(installed_packages)
 
-p1=subprocess.check_output([sys.executable, "-m", "pip", "install", "argilla"], shell=True)
+#subprocess.check_call([sys.executable, "-m", "pip", "install", "argilla"])
 # process output with an API in the subprocess module:
 reqs = subprocess.check_output([sys.executable, '-m', 'pip',
 'freeze'])
 installed_packages = [r.decode().split('==')[0] for r in reqs.split()]
 
 print(installed_packages)
-
 print(sys.path)
-import numpy as np
-from argilla import argilla as rg
+
+import argilla as rg
 
 uri= os.environ.get("API_URL")
 key= os.environ.get("API_KEY")

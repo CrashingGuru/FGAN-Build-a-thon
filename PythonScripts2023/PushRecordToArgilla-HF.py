@@ -31,6 +31,7 @@ installed_packages = [r.decode().split('==')[0] for r in reqs.split()]
 print(installed_packages)
 
 print(sys.path)
+import numpy as np
 from argilla import argilla as rg
 
 uri= os.environ.get("API_URL")

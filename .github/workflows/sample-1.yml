@@ -8,18 +8,24 @@ jobs:
   issue_opened_edited:
     runs-on: ubuntu-latest
     steps:
-      - name: print issue details
+      - name: Print issue details
         run: |
           echo Gotcha issue $LABELS
         env:
           LABELS: ${{ github.event.issue.labels[0].name }}   
-      - name: print secret and variables
+
+      - name: Checkout so that we have the python script in the container
         uses: actions/checkout@v2
         with:
             repository: vrra/FGAN-Build-a-thon
             token: ${{ secrets.MY_GITHUB_TOKEN }}
 
-      - name: print env vars
+      - name: View the github context
+        run: echo "$GITHUB_CONTEXT" >> ${{ vars.SCRIPTS_DIR }}/issue.out
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+
+      - name: Push to Argilla
         run: python ${{ vars.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
         shell: sh
         env:

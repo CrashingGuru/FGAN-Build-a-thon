@@ -26,7 +26,7 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
 
       - name: Push to Argilla
-        run: python ${{ vars.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
+        run: python3 ${{ vars.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
         shell: sh
         env:
             API_URL: ${{ vars.API_URL }}

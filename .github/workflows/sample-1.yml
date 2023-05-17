@@ -1,5 +1,5 @@
 name: sample1
-run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: FGAN-Build-a-thon 2023 GitHub Actions
 on:
   issues: 
     types: [opened, edited]

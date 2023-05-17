@@ -65,7 +65,7 @@ issue_body=json_object["event"]["issue"]["body"]
 issue_body_list=issue_body.split("###")
 #print("issue_body_list= ", issue_body_list)
 
-issue_label=json_object["event"]["issue"]["labels"][4]
+issue_label=json_object["event"]["issue"]["labels"][0]["name"]
 print("issue_label= ", issue_label)
 
 #NOTE- we use max split as 1 to avoid false positive of double \n\n in the body.

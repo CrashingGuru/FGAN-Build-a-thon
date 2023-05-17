@@ -68,39 +68,44 @@ issue_body_list=issue_body.split("###")
 issue_label=json_object["event"]["issue"]["labels"][0]["name"]
 print("issue_label= ", issue_label)
 
-#NOTE- we use max split as 1 to avoid false positive of double \n\n in the body.
-team_name=issue_body_list[1].split("\n\n", 1)
-usecase_text=issue_body_list[2].split("\n\n", 1)
-ref=issue_body_list[3].split("\n\n", 1)
+if ("Submit use case for Build-a-thon 2023" == issue_label):
+    print("This is a use case submission! lets process it!")
 
-team_name=team_name[1]
-usecase_text=usecase_text[1]
-ref=ref[1]
+    #NOTE- we use max split as 1 to avoid false positive of double \n\n in the body.
+    team_name=issue_body_list[1].split("\n\n", 1)
+    usecase_text=issue_body_list[2].split("\n\n", 1)
+    ref=issue_body_list[3].split("\n\n", 1)
 
-print("team_name= ", team_name)
-print("usecase_text = ", usecase_text)
-print("ref = ", ref)
+    team_name=team_name[1]
+    usecase_text=usecase_text[1]
+    ref=ref[1]
 
-record = rg.TextClassificationRecord(
-                text=usecase_text,
-                    # Extra information about this record
-                metadata={
-                        "split": "train",
-                        "team_name": team_name,
-                        "ref": ref
-                    },
-                )
+    print("team_name= ", team_name)
+    print("usecase_text = ", usecase_text)
+    print("ref = ", ref)
 
-dataset_rg = rg.DatasetForTextClassification([record])
-rg.log(dataset_rg, my_db_name)
+    record = rg.TextClassificationRecord(
+                    text=usecase_text,
+                        # Extra information about this record
+                    metadata={
+                            "split": "train",
+                            "team_name": team_name,
+                            "ref": ref
+                        },
+                    )
 
-### push the dataset to the Hugging Face Hub
-from huggingface_hub import login
-login(token=my_push_to_hf_hub_token)
+    dataset_rg = rg.DatasetForTextClassification([record])
+    rg.log(dataset_rg, my_db_name)
 
-from datasets import load_dataset
-dataset_rg = rg.load(my_db_name)
-dataset_ds = dataset_rg.to_datasets()
+    ### push the dataset to the Hugging Face Hub
+    from huggingface_hub import login
+    login(token=my_push_to_hf_hub_token)
 
-#push the dataset to the Hugging Face Hub
-dataset_ds.push_to_hub(my_hf_hub_name)
+    from datasets import load_dataset
+    dataset_rg = rg.load(my_db_name)
+    dataset_ds = dataset_rg.to_datasets()
+
+    #push the dataset to the Hugging Face Hub
+    dataset_ds.push_to_hub(my_hf_hub_name)
+else:
+    print("This is not a use case submission! lets forget it!")

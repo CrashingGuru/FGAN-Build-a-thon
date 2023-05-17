@@ -90,7 +90,7 @@ record = rg.TextClassificationRecord(
                 )
 
 dataset_rg = rg.DatasetForTextClassification([record])
-rg.log(dataset_rg, "fgandataset01")
+rg.log(dataset_rg, my_db_name)
 
 ### push the dataset to the Hugging Face Hub
 from huggingface_hub import login

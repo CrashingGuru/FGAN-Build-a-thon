@@ -96,6 +96,10 @@ if (my_issue_label == issue_label):
                         },
                     )
 
+    #NOTE- sub-optimal: at this point, all records will configure the db
+    settings = rg.TextClassificationSettings(label_schema=["Usecase", "Architecture", "PoC", "Other"])
+    rg.configure_dataset(name=my_db_name, settings=settings)
+
     dataset_rg = rg.DatasetForTextClassification([record])
     rg.log(dataset_rg, my_db_name)
 
@@ -103,6 +107,7 @@ if (my_issue_label == issue_label):
     from huggingface_hub import login
     login(token=my_push_to_hf_hub_token)
 
+    #NOTE- sub-optimal: at this point, all records will push the entire db to hf hub
     from datasets import load_dataset
     dataset_rg = rg.load(my_db_name)
     dataset_ds = dataset_rg.to_datasets()

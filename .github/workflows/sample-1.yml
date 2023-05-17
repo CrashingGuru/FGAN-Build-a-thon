@@ -1,4 +1,4 @@
-name: sample1
+name: FGAN-Build-a-thon 2023 GitHub Actions workflow
 run-name: FGAN-Build-a-thon 2023 GitHub Actions
 on:
   issues: 
@@ -39,3 +39,4 @@ jobs:
             SCRIPTS_DIR: ${{ vars.SCRIPTS_DIR }}  
             DB_NAME: ${{ vars.DB_NAME }} 
             HF_HUB_NAME: ${{ vars.HF_HUB_NAME }}
+            MY_ISSUE_LABEL: ${{ vars.MY_ISSUE_LABEL }}

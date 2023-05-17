@@ -40,6 +40,7 @@ my_argilla_workspace = os.environ.get("ARGILLA_WORKSPACE")
 my_push_to_hf_hub_token=os.environ.get("MY_PUSH_TO_HF_HUB_TOKEN")
 my_db_name=os.environ.get("DB_NAME")
 my_hf_hub_name=os.environ.get("HF_HUB_NAME")
+my_issue_label=os.environ.get("MY_ISSUE_LABEL")
 
 
 print(uri)
@@ -47,6 +48,7 @@ print(key)
 print(my_argilla_workspace)
 print(my_db_name)
 print(my_hf_hub_name)
+print(my_issue_label)
 
 rg.init(    
     api_url=uri, 
@@ -68,7 +70,7 @@ issue_body_list=issue_body.split("###")
 issue_label=json_object["event"]["issue"]["labels"][0]["name"]
 print("issue_label= ", issue_label)
 
-if ("Submit use case for Build-a-thon 2023" == issue_label):
+if (my_issue_label == issue_label):
     print("This is a use case submission! lets process it!")
 
     #NOTE- we use max split as 1 to avoid false positive of double \n\n in the body.

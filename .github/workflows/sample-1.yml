@@ -28,7 +28,7 @@ jobs:
       - name: Push to Argilla
         run: |
           python -m pip install --upgrade pip
-          pip install argilla
+          pip install argilla datasets
           pip install huggingface_hub
           python ${{ vars.SCRIPTS_DIR }}/PushRecordToArgilla-HF.py
         env:

@@ -10,6 +10,7 @@
 #this runs inside the container spawned by github actions
 #expects magik file issue.out in the same dir as this py script.
 
+
 import os
 import json
 
@@ -36,10 +37,16 @@ import argilla as rg
 uri= os.environ.get("API_URL")
 key= os.environ.get("API_KEY")
 my_argilla_workspace = os.environ.get("ARGILLA_WORKSPACE")
+my_push_to_hf_hub_token=os.environ.get("MY_PUSH_TO_HF_HUB_TOKEN")
+my_db_name=os.environ.get("DB_NAME")
+my_hf_hub_name=os.environ.get("HF_HUB_NAME")
+
 
 print(uri)
 print(key)
 print(my_argilla_workspace)
+print(my_db_name)
+print(my_hf_hub_name)
 
 rg.init(    
     api_url=uri, 
@@ -83,4 +90,15 @@ record = rg.TextClassificationRecord(
                 )
 
 dataset_rg = rg.DatasetForTextClassification([record])
-rg.log(dataset_rg, "fgan23allpages")
+rg.log(dataset_rg, "fgandataset01")
+
+### push the dataset to the Hugging Face Hub
+from huggingface_hub import login
+login(token=my_push_to_hf_hub_token)
+
+from datasets import load_dataset
+dataset_rg = rg.load(my_db_name)
+dataset_ds = dataset_rg.to_datasets()
+
+#push the dataset to the Hugging Face Hub
+dataset_ds.push_to_hub(my_hf_hub_name)

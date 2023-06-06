@@ -9,6 +9,7 @@
 #CAUTION
 #this runs inside the container spawned by github actions
 #expects magik file issue.out in the same dir as this py script.
+#Called from the workflow sample-1.yml
 
 
 import os

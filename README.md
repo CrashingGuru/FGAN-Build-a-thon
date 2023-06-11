@@ -1,6 +1,6 @@
 <img src="Banner/14JulyBanner2023.png" width="500" height="250" />
 
-Register for Build-a-thon 2023 Workshop 2.0 [here](https://itu.zoom.us/meeting/register/tJIof-GopjwoG9Smfvvc-m4SGYf4EJ-yLUR4)
+Register for Build-a-thon 2023 Workshop 2.0 [here](https://itu.zoom.us/meeting/register/tJcvf-yurz0rGNCnH6lAMwbo8Sj_uiqzPL1C)
 
 # Build-a-thon 
 This repo includes all material for ITU-T FG AN Build-a-thon in 2022 and 2023

@@ -1,4 +1,4 @@
-<img src="Banner/Build-a-thon-2023-w2.png" width="500" height="250" />
+<img src="Banner/14JulyBanner2023.png" width="500" height="250" />
 
 Register for Build-a-thon 2023 Workshop 2.0 [here](https://itu.zoom.us/meeting/register/tJIof-GopjwoG9Smfvvc-m4SGYf4EJ-yLUR4)
 

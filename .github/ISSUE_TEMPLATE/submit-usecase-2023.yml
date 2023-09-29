@@ -17,6 +17,12 @@ body:
       multiple: false
       options: 
       - "CR-Insight"
+      - "CR-Analytics"
+      - "Nokia Champ"
+      - "Perfect Unit"
+      - "TECH CREED"
+      - "Acute Angle"
+      - "Attack on Hackers"
     validations:
       required: true
   - type: input

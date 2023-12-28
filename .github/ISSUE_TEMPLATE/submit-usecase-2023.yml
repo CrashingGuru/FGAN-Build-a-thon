@@ -26,18 +26,18 @@ body:
     validations:
       required: true
   - type: input
-    id: Use-case-Text
+    id: Filename
     attributes:
-      label: Use case Text
-      description: Enter use case text here
-      placeholder: ex. A closed loop module collect real-time data from the 4/5G integrated network management, then compares the consistency of the number of network elements from the data, and displays data quality monitoring and warning through the visualization panel.
+      label: Filename
+      description: Enter Filename here
+      placeholder: e.g. Use-case-AN.pdf
     validations:
       required: true
   - type: input
-    id: Reference
+    id: URL
     attributes:
-      label: Reference (if any)
-      description: Enter details of any reference document
-      placeholder: ex. https://www.itu.int/rec/T-REC-Y.Sup71-202207-I 
+      label: URL
+      description: Enter the URL to access the file
+      placeholder: e.g. https://www.itu.int/en/ITU-T/focusgroups/an/Documents/Use-case-AN.pdf
     validations:
-      required: false
+      required: true

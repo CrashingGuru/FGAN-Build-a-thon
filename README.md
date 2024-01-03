@@ -1,5 +1,4 @@
 
-Recording for Build-a-thon 2023 Workshop 4.0 [here](https://itu.zoom.us/rec/share/yBZUJgG259glaVTNuw4L6S07PxmCImaQg5YdoRrC-qjcNJVMRpyismdBNHpuYKrB.a9UhsTziSXVFSw2u)
 
 # Build-a-thon 
 This repo includes all material for ITU-T FG AN Build-a-thon in 2022 and 2023

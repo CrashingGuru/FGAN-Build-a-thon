@@ -1,4 +1,7 @@
+Registration link for the Jan 19, 2024, 
 
+Final Build-a-thon Workshop
+https://itu.zoom.us/meeting/register/tJIqcu-sqzgqGNNGlcSwI2SdtZv-Dd3qjddb#/registration
 
 # Build-a-thon 
 This repo includes all material for ITU-T FG AN Build-a-thon in 2022 and 2023
